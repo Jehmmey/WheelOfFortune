@@ -14,7 +14,7 @@ public class WheelOfFortune {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    
+    System.out.println("hello it's a good day to sleep in!");
   }
   
 }
