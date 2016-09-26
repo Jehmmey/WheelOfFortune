@@ -11,7 +11,7 @@ package wheeloffortune;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
+import java.util.Random;
 /**
  *
  * @author Phil O'Connell <pxo4@psu.edu>
@@ -99,6 +99,9 @@ public class WheelOfFortune {
         case _quitChoiceNumber:
           quit = true;
           break;
+        case 1:
+            wheelSpin();
+            createPuzzle();
         case 9:
           System.out.println("Your letter is: " + inputLetter());
           break;
@@ -112,5 +115,25 @@ public class WheelOfFortune {
   public static void main(String[] args) {
     gameMenu();
   }
+   public static void wheelSpin(){
+      String [] wheelValues = {
+              "$300","$300","$300","$300",
+              "$300","$350", "$400", "$400",
+              "$450","$500", "$500", "$500",
+              "$550","$600", "$600", "$600",
+              "$700", "$800", "$800", "$900", 
+              "$900", "$5000", "LOSE A TURN", "BANKRUPT"};	
 
+      Random randValue = new Random();
+      int index = randValue.nextInt(wheelValues.length);
+      System.out.println("You landed on:" + wheelValues[index]);
+
+    }
+    public static void createPuzzle(){
+      String puzzle = "The quick brown fox jumps over the lazy dog";
+
+
+    }
+    public static void puzzleReveal(){
+}
 }
