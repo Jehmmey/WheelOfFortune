@@ -93,8 +93,9 @@ public class WheelOfFortune {
   // The different puzzles to choose from
   private static final List<String> _puzzles = Arrays.asList(
       "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG",
-      "PENN STATE ABINGTON",
-      "INFORMATION SCIENCES AND TECHNOLOGY"
+      "WE ARE PENN STATE ABINGTON",
+      "INFORMATION SCIENCES AND TECHNOLOGY",
+      "YOU COMPLETE ME"
   );
 
   /*
