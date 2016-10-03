@@ -71,7 +71,9 @@ public class WheelOfFortune {
   private static String chooseRandomWedgeValue() {
     // Choose a random index
     int randomWedgeIndex = _random.nextInt(_wedgeCount);
-
+    
+    
+    
     // Return the corresponding wedge
     return _wedges.get(randomWedgeIndex);
   }
@@ -85,8 +87,8 @@ public class WheelOfFortune {
       "", // 5 possibly used in the future
       "", // 6 possibly used in the future
       "", // 7 possibly used in the future
-      "8. Toggle puzzle reveal",
-      "9. Test letter input"
+      "", // 8 possibly used in the future
+      ""  // 9 possibly used in the future
   );
   private static final int _quitChoiceNumber = 4;
 
