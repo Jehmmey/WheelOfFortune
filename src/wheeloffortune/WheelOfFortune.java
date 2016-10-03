@@ -309,7 +309,17 @@ public class WheelOfFortune {
                     }
  
                     break;
-
+                
+                //Currently a work in progress.
+                    //promps user to enter letters without consequences
+                    //have yet to implement win, or lose clauseS
+                case 3:
+                    System.out.println("You have entered puzzle solver mode. ");
+                    for (int i = 0; i <_puzzles.size(); i++){
+                    char letterS = inputLetter();
+                    guessedLetters.put(letterS, true);
+                }
+                    break;
                 //menu choics 8 & 9 removed
             /*
                  case 8: // Toggle reveal letters
