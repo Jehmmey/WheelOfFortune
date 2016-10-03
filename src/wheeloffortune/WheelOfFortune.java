@@ -284,21 +284,21 @@ public class WheelOfFortune {
                    // guessedLetters.put(letter, true);
                     break;
 
-                //letterV(vowel) to make vowel purchase
+                //letterVowel(vowel) to make vowel purchase
                  //now functioning from menu 2
                     //checks winnings to see if one can purchase vowel
                 case 2:
-                    char letterV = inputLetter();
-                    if (letterV == 'a' || letterV == 'A'
-                            || letterV == 'e' || letterV == 'E'
-                            || letterV == 'i' || letterV == 'I'
-                            || letterV == 'o' || letterV == 'O'
-                            || letterV == 'u' || letterV == 'U') {
+                    char letterVowel = inputLetter();
+                    if (letterVowel == 'a' || letterVowel == 'A'
+                            || letterVowel == 'e' || letterVowel == 'E'
+                            || letterVowel == 'i' || letterVowel == 'I'
+                            || letterVowel == 'o' || letterVowel == 'O'
+                            || letterVowel == 'u' || letterVowel == 'U') {
 
                         if (winnings >= 250) {
                             winnings = winnings - 250;
-                            System.out.println(" You have purchased : " + letterV + " ");
-                            guessedLetters.put(letterV, true);
+                            System.out.println(" You have purchased : " + letterVowel + " ");
+                            guessedLetters.put(letterVowel, true);
 
                         } 
                     } else {
@@ -316,8 +316,8 @@ public class WheelOfFortune {
                 case 3:
                     System.out.println("You have entered puzzle solver mode. ");
                     for (int i = 0; i <_puzzles.size(); i++){
-                    char letterS = inputLetter();
-                    guessedLetters.put(letterS, true);
+                    char letterSolver = inputLetter();
+                    guessedLetters.put(letterSolver, true);
                 }
                     break;
                 //menu choics 8 & 9 removed
