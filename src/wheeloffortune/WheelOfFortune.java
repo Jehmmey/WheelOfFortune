@@ -30,7 +30,9 @@ public class WheelOfFortune {
 
   // True if we want to show all letters
   private static boolean revealLetters = false;
-
+  
+  //Used to determine winnings of user
+  private static int winnings = 0;
   /*
   * These are the wedges that are part of the wheel.
   * There are 24.  Some values can appear more than once
@@ -71,8 +73,14 @@ public class WheelOfFortune {
   private static String chooseRandomWedgeValue() {
     // Choose a random index
     int randomWedgeIndex = _random.nextInt(_wedgeCount);
-    
-    
+   
+    //Used to calculate current net win
+    if(_wedges.get(randomWedgeIndex) != "LOSE A TURN" && _wedges.get(randomWedgeIndex) != "BANKRUPT"){
+      winnings += Integer.parseInt(_wedges.get(randomWedgeIndex).replace("$", ""));
+  }
+    else if (_wedges.get(randomWedgeIndex) == "BANKRUPT"){
+      winnings = 0;
+  }
     
     // Return the corresponding wedge
     return _wedges.get(randomWedgeIndex);
@@ -219,7 +227,8 @@ public class WheelOfFortune {
       System.out.println("                      =  Wheel Of Fortune  =");
       System.out.println("                      ======================");
       System.out.println("                                            ");
-
+      
+      System.out.println("Current net gain is : $" + winnings);
       System.out.println(maskPuzzle(puzzle, revealLetters));
       System.out.println();
 
@@ -260,14 +269,20 @@ public class WheelOfFortune {
           System.out.println("Your letter is: " + letter);
           guessedLetters.put(letter, true);
           break;
-
-        case 8: // Toggle reveal letters
+         
+        case 2:
+        break;
+            
+            //menu choics 8 & 9 removed
+            /*
+            case 8: // Toggle reveal letters
           revealLetters = !revealLetters;
           break;
 
         case 9: // Test to read in a letter from the keyboard
           System.out.println("Your letter is: " + inputLetter());
           break;
+            */
       }
     }
   }
